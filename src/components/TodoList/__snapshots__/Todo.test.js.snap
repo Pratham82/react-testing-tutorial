@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-testid="todo-1"
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }
+>
+   
+  <span
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    Do Laundry
+  </span>
+</div>
+`;
