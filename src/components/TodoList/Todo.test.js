@@ -12,10 +12,10 @@ test('should render todo component', () => {
   render(<Todo id={id} title={title} status={status} />)
   const todoElement = screen.getByTestId('todo-1')
   expect(todoElement).toBeInTheDocument()
+  // Check if todo is'nt empty
+  expect(todoElement).toHaveTextContent(/[A-Z]/gi)
   // Check if it is exact todo
   expect(todoElement).toHaveTextContent('Do Laundry')
-  // Check if empty
-  expect(todoElement).toHaveTextContent(/[A-Z]/gi)
 })
 
 // Check completed Todo
