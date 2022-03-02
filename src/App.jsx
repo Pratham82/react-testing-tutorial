@@ -1,4 +1,5 @@
 import './App.css'
+import Counter from './components/Counter/Counter'
 import Search from './components/SearchPage/Search'
 // import HelloWorld from './components/HelloWorld/HelloWorld'
 import TodoList from './components/TodoList/TodoList'
@@ -11,6 +12,7 @@ function App() {
         {/* <TodoList /> */}
         {/* <HelloWorld /> */}
         <Search />
+        <Counter />
       </header>
     </div>
   )
