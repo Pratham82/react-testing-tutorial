@@ -20,39 +20,26 @@ afterEach(() => {
 })
 
 test('Checks if counter is present', () => {
-  // render(<Counter />)
-  // const headerEl = screen.getByTestId('header')
   expect(headerEl).toBeTruthy()
 })
 
 test('Counter initially starts at 0', () => {
-  // render(<Counter />)
-  // const countEl = screen.getByTestId('counter')
   expect(countEl.textContent).toBe('0')
 })
 
 test('Input contains initial value of 1', () => {
-  // render(<Counter />)
-  // const inputEl = screen.getByTestId('input')
   expect(inputEl.value).toBe('1')
 })
 
 test('Add button renders with +', () => {
-  // render(<Counter />)
-  // const addBtn = screen.getByTestId('add-btn')
   expect(addBtn.textContent).toBe('+')
 })
 
 test('Subtract button renders with  -', () => {
-  // render(<Counter />)
-  // const subBtn = screen.getByTestId('sub-btn')
   expect(subBtn.textContent).toBe('-')
 })
 
 test('Changing value of input works correctly', () => {
-  // render(<Counter />)
-  // const inputEl = screen.getByTestId('input')
-
   // Check initial value
   expect(inputEl.value).toBe('1')
 
@@ -64,26 +51,17 @@ test('Changing value of input works correctly', () => {
 })
 
 test('clicking on plus button increments the count', () => {
-  // render(<Counter />)
   // Click on plus button event
-  // const addBtn = screen.getByTestId('add-btn')
   fireEvent.click(addBtn)
 
   // Get value of input
-  // const inputEl = screen.getByTestId('input')
   const value = inputEl.value
 
   // Check if the counter incremented according to inputElements value
-  // const countEl = screen.getByTestId('counter')
   expect(countEl.textContent).toBe(value)
 })
 
 test('clicking on subtract button decrements the count', () => {
-  // render(<Counter />)
-  // const subBtn = screen.getByTestId('sub-btn')
-
-  // const countEl = screen.getByTestId('counter')
-
   expect(countEl.textContent).toBe('0')
 
   // Check if the counter incremented according to inputElements value
@@ -93,11 +71,6 @@ test('clicking on subtract button decrements the count', () => {
 })
 
 test('changing input value and clicking on add button works correctly', () => {
-  // render(<Counter />)
-  // const addBtn = screen.getByTestId('add-btn')
-  // const countEl = screen.getByTestId('counter')
-  // const inputEl = screen.getByTestId('input')
-
   // Change the input value
   fireEvent.change(inputEl, { target: { value: '10' } })
 
@@ -108,11 +81,6 @@ test('changing input value and clicking on add button works correctly', () => {
 })
 
 test('changing input value and clicking on subtract button works correctly', () => {
-  // render(<Counter />)
-  // const subBtn = screen.getByTestId('sub-btn')
-  // const countEl = screen.getByTestId('counter')
-  // const inputEl = screen.getByTestId('input')
-
   // Change the input value
   fireEvent.change(inputEl, { target: { value: '10' } })
 
@@ -123,12 +91,6 @@ test('changing input value and clicking on subtract button works correctly', () 
 })
 
 test('adding and then subtracting leads to correct counter number', () => {
-  // render(<Counter />)
-  // const addBtn = screen.getByTestId('add-btn')
-  // const subBtn = screen.getByTestId('sub-btn')
-  // const countEl = screen.getByTestId('counter')
-  // const inputEl = screen.getByTestId('input')
-
   // Add
   fireEvent.change(inputEl, { target: { value: '10' } })
   fireEvent.click(addBtn)
@@ -141,12 +103,6 @@ test('adding and then subtracting leads to correct counter number', () => {
 })
 
 test('counter contains correct className', () => {
-  // render(<Counter />)
-  // const addBtn = screen.getByTestId('add-btn')
-  // const subBtn = screen.getByTestId('sub-btn')
-  // const countEl = screen.getByTestId('counter')
-  // const inputEl = screen.getByTestId('input')
-
   expect(countEl.className).toBe('')
 
   fireEvent.change(inputEl, {
